@@ -33,10 +33,10 @@ Things you may want to cover:
  has_many :messages
  has_many:groups_users
 
-## goupテーブル
+## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|name|string|null: false, unique: true|
 ### Association
  has_many :groups,through::groups_users
  has_many :messages
