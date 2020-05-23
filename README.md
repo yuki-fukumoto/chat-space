@@ -22,7 +22,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-<<<<<<< HEAD
 
 ## chat-space db
 ## usersテーブル
@@ -37,7 +36,7 @@ Things you may want to cover:
 ## goupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|text|null: false|
+|name|string|null: false|
 ### Association
  has_many :groups,through::groups_users
  has_many :messages
