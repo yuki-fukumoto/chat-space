@@ -22,6 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+<<<<<<< HEAD
 
 ## groups_usersテーブル
 
@@ -33,4 +34,3 @@ Things you may want to cover:
 ### Association
 - belongs_to :group
 - belongs_to :user
-
