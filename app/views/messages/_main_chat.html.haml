@@ -7,9 +7,17 @@
         member:
         %li.main-header_left-box_member-list_member
         fuku
-
     .main-header_edit-btn
       Edit
-      = link_to "#" do
+      /= link_to "#" do
+  .messages
     .message
+      .message_upper-info
+        %p.message_upper-info_talker
+          test
+        %p.message_upper-info_date
+          today
+    %p.message_text
+      text
     .form
+
