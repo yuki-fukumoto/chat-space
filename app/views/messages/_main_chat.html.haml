@@ -20,4 +20,12 @@
     %p.message_text
       text
     .form
+      .input-box
+        %input{placeholder:"type_a_message",class:"input-box_text",type:"text",name:"message[content]",id:"message_content"}
+        
+        %label{class: "input-box__image",for:"message_image"}
+          %i{class:"fa-image"}
+        //= icon('fas', 'image')
+        //%input{type: "file"}
 
+  %input{type:"submit",name:"commit",value:"Send",class:"submit-btn",data_disable_with:"Send"}
