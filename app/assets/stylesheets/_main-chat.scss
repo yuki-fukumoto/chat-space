@@ -29,7 +29,7 @@
           &_left-box_member-list_member{
             padding-left: 5px;
                 }
-            .main-header_edit-btn{
+            .main-header__edit-btn{
               height: 40px;
               line-height: 40px;
               padding: 0 20px;
@@ -48,46 +48,34 @@
       .message {
         padding-bottom: 40px;
         }
-        &_upper-info {
-        display: flex;
-        margin-bottom: 10px;
+          .message_upper-info {
+          display: flex;
+          margin-bottom: 10px;
          }
-          &_upper-info_talker {
+          .message_upper-info_talker {
           color: #434a54;
           font-size: 16px;
           font-weight: bold;
         }
-          &_upper-info_date {
+          .message_upper-info_date {
           font-size: 12px;
           color: #999999;
           margin-left: 10px;
         }
-        &_text { 
-        color: #434A54;
-        font-size: 14px
-        margin-bottom 10px;
+          .message_text { 
+          color: #434A54;
+          font-size: 14px
+          margin-bottom 10px;
       }             
   }
   .form {
-    height: 50px;
+    height: 90px;
     padding: 20px 40px;
     background-color: #ddd;
     position: fixed;
     bottom: 0;
-    width: calc(100vw - 380px);
-  
-    .new-message {
-      display: flex;
-    }
-    
-    .input-text {
-      font-size: 16px;
-      height: 50px;
-      width: 100%;
-      padding: 0 15px;
-      color: #434a54;
-      border-style: none;
-    }
+    width: calc(100vw - 300px);
+    display: flex;
     
     .submit-btn {
       width: 100px;
@@ -100,6 +88,29 @@
       color: #ffffff
     }
   
+    .input-box{
+      position: relative;
+      width: 100%;
+      &__text{
+        height: 50px;
+        width: 100%;
+        padding: 0 40px 0 10px;
+        color: #434a54;
+        border-style: none;
+
+      }
+      &__image{
+        font-size: 1.3rem;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        &__file{
+          display:none;
+        }
+      }
+    
+    }
   }
  
 }

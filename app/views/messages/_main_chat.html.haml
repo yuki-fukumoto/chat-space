@@ -7,9 +7,11 @@
         member:
         %li.main-header_left-box_member-list_member
         fuku
-    .main-header_edit-btn
-      Edit
-      /= link_to "#" do
+
+    %a{ href: "#"}
+      %div.main-header__edit-btn
+        Edit
+
   .messages
     .message
       .message_upper-info
@@ -17,15 +19,21 @@
           test
         %p.message_upper-info_date
           today
-    %p.message_text
+      %p.message_text
       text
-    .form
-      .input-box
-        %input{placeholder:"type_a_message",class:"input-box_text",type:"text",name:"message[content]",id:"message_content"}
-        
+  .form
+    .input-box
+      %input{placeholder:"type__a__message",class:"input-box__text",type:"text",name:"message[content]",id:"message_content"}
+      
         %label{class: "input-box__image",for:"message_image"}
-          %i{class:"fa-image"}
-        //= icon('fas', 'image')
-        //%input{type: "file"}
+          %i{class:"fa fa-image"}
+          %input{class:"input-box__image__file",type:"file",name:"message[image]",id: "message_image"}
+    %input{type:"submit",name:"commit",value:"Send",class:"submit-btn",data_disable_with:"Send"}
 
-  %input{type:"submit",name:"commit",value:"Send",class:"submit-btn",data_disable_with:"Send"}
+
+
+
+
+
+    
+  
