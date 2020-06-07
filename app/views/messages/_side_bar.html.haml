@@ -2,17 +2,18 @@
   .side-header
     .side-header_box
       .side-header_box_user-name
-        fukumoto
+        = current_user.name
       .side-header_box_menu
         .side-header_box_edit-user
           =link_to "#" do
-            =icon('fas','edit')
+            = icon('fas', 'pen-square', class: 'icon')
         .side-box_new-groups
-          =link_to "#" do
-            =icon('fas','cog')
+          = link_to edit_user_path(current_user) do
+            = icon('fas', 'cog', class: 'icon')
+
   .groups
     .group
-    .group-name
+      .group-name
       techcamp
-    .group-message
+      .group-message
       まだメッセージがありません
