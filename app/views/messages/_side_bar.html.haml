@@ -12,8 +12,10 @@
             = icon('fas', 'cog', class: 'icon')
 
   .groups
+    - current_user.groups.each do |group|
     .group
-      .group-name
-      techcamp
-      .group-message
-      まだメッセージがありません
+      = link_to '#' 
+        .group-name
+          = group.name
+        .group-message
+        まだメッセージがありません
