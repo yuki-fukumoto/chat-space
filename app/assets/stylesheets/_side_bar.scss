@@ -39,18 +39,15 @@
     height: calc(100vh - 100px);     
     padding: 20px 20px 0;
     bottom: 0;
-    overflow: scroll;
-      .group{
-        margin-bottom: 40px;
+    .group{
+      margin-bottom: 40px;
+      &__name {
+        font-size: 15px;
+        padding-bottom: 5px;
       }
-    
-        .group-name {
-          font-size: 15px;
-          padding-bottom: 5px;
-        }
-        .group-message {
-          font-size: 11px;
-        }
-      
+      &__message {
+        font-size: 11px;
+      }
     }
   }
+}

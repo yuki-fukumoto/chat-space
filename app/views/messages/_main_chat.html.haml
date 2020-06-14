@@ -1,39 +1,25 @@
 .main-chat
   .main-header
-    .main-header_left-box
-      %h2.main-header_left-box_current-group
-      test
-      %ul.main-header_left-box_member-list
+    .main-header__left-box
+      %h2.main-header__left-box__current-group
+        = @group.name
+      %ul.main-header__left-box__member-list
         member:
-        %li.main-header_left-box_member-list_member
-        fuku
-
-    %link_to{ href:"#"}
-      %div.main-header__edit-btn
+        %li.main-header__left-box__member-list__member
+          - @group.users.each do |user|
+            = user.name
+    = link_to edit_group_path(@group.id) do
+      .main-header__edit-btn
         Edit
-
+     
   .messages
-    .message
-      .message_upper-info
-        %p.message_upper-info_talker
-          test
-        %p.message_upper-info_date
-          today
-      %p.message_text
-      text
+    = render @messages
+
   .form
-    .input-box
-      %input{placeholder:"type__a__message",class:"input-box__text",type:"text",name:"message[content]",id:"message_content"}
-      
-        %label{class: "input-box__image",for:"message_image"}
-          %i{class:"fa fa-image"}
-          %input{class:"input-box__image__file",type:"file",name:"message[image]",id: "message_image"}
-    %input{type:"submit",name:"commit",value:"Send",class:"submit-btn",data_disable_with:"Send"}
-
-
-
-
-
-
-    
-  
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
