@@ -78,27 +78,29 @@
     background-color: #ddd;
     position: fixed;
     bottom: 0;
-    width: calc(100vw - 380px);
+    width: calc(100vw - 300px);
     &__message {
       height: 50px;
       width: calc(100% - 135px);
       padding: 0 10px;
       margin-right: 15px;
       color: #434a54;
-    }
-    &__mask {
       position: relative;
+    }
+      &__mask {
+        position: relative;
+    
       &__image {
         font-size: 1.3rem;
         position: absolute;
         top: 30px;
-        right: 160px;
+        right: 150px;
         cursor: pointer;
         .hidden {
           display: none;
         }
       }
-    }
+    }  
     &__submit {
       position: absolute;
       top: 20px;
