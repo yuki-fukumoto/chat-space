@@ -19,8 +19,12 @@
     = form_for [@group, @message] do |f|
       .form__input__box
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-        .form__mask
-          = f.label :image, class: 'form__mask__image' do
-            = icon('fas', 'image', class: 'icon')
-            = f.file_field :image, class: 'hidden'
-        = f.submit 'Send', class: 'form__submit'
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
+
+
+-# .form__input__box  text_fieldと同じ大きさ　relative
+-#   = f.text_filed 
+-#   = f.label abusolute

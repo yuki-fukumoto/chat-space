@@ -79,18 +79,24 @@
     position: fixed;
     bottom: 0;
     width: calc(100vw - 300px);
-    &__message {
+    &__input__box{
       height: 50px;
       width: calc(100% - 135px);
+      padding: 0 10px;
+      margin-right: 15px;
+      position: relative;
+    }
+    
+    &__message {
+      height: 50px;
+      width:100%;
       padding: 0 10px;
       margin-right: 15px;
       color: #434a54;
 
     }
-      &__mask {
-        position: relative;
     
-      &__image {
+      &__mask__image {
         font-size: 1.3rem;
         position: absolute;
         top: 30px;
@@ -100,7 +106,7 @@
           display: none;
         }
       }
-    }  
+      
     &__submit {
       position: absolute;
       top: 20px;
@@ -110,6 +116,6 @@
       background-color: #38aef0;
       color: #ffffff;
       cursor: pointer;
+      }
     }
   }
-}
